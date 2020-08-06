@@ -1,14 +1,40 @@
 package com.androidprimary;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.TimeUtils;
+import android.widget.PopupWindow;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.androidprimary.asynctask.DownloadActivity;
+import com.androidprimary.dialog.AlertDialogActivity;
+import com.androidprimary.dialog.PopupWindowActivity;
+import com.androidprimary.fragment.FragmentAActivity;
+import com.androidprimary.intent.FirstActivity;
+import com.androidprimary.layout.ConstraintLayoutActivity;
+import com.androidprimary.menu.ContextMenuActivity;
+import com.androidprimary.menu.OptionMenuActivity;
+import com.androidprimary.menu.PopupMenuActivity;
+import com.androidprimary.viewpager.TabViewPagerActivity;
+import com.androidprimary.viewpager.ViewPagerActivity;
+
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Class aClass = TabViewPagerActivity.class;
+
+        startActivity(new Intent(this, aClass));
     }
+
 }

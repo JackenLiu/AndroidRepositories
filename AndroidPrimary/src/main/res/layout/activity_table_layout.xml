@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    tools:context=".layout.TableLayoutActivity">
+    <!--   设置可以收缩的列 lie android:shrinkColumns="1"-->
+    <!--    设置可以隐藏的列 android:collapseColumns="3"-->
+
+
+    <Button android:text="1" />
+
+    <Button android:text="2" />
+
+    <TableRow>
+
+        <Button android:text="1" />
+
+        <Button android:text="1" />
+
+        <Button android:text="1" />
+
+        <Button android:text="2" />
+    </TableRow>
+
+</TableLayout>

@@ -1,3 +1,4 @@
+include ':MobileSafe'
 include ':AndroidPrimary'
 include ':JavaReview'
 include ':JavaPrimary'

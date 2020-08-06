@@ -7,4 +7,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="my_dialog" parent="android:style/Theme.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    
+    <style name="translate_anim">
+        <item name="android:windowEnterAnimation">@anim/translate</item>
+    </style>
 </resources>
