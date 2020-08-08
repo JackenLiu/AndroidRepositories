@@ -4,6 +4,9 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <!-- 在.idea/gradle.xml中的 GradleProjectSettings标签下插入如下语句 -->
+        <option name="delegatedBuild" value="false" />
+
         <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
