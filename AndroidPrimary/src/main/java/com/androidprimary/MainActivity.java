@@ -21,6 +21,9 @@ import com.androidprimary.layout.ConstraintLayoutActivity;
 import com.androidprimary.menu.ContextMenuActivity;
 import com.androidprimary.menu.OptionMenuActivity;
 import com.androidprimary.menu.PopupMenuActivity;
+import com.androidprimary.net.tcp.TcpActivity;
+import com.androidprimary.net.udp.android.UdpActivity;
+import com.androidprimary.service.ServiceActivity;
 import com.androidprimary.viewpager.TabViewPagerActivity;
 import com.androidprimary.viewpager.ViewPagerActivity;
 
@@ -32,9 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Class aClass = TabViewPagerActivity.class;
+        Class aClass = TcpActivity.class;
 
         startActivity(new Intent(this, aClass));
     }
-
 }

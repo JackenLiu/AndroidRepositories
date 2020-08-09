@@ -5,7 +5,7 @@ package com.javaprimary.a9_network.tcp;
  */
 public class A1_TcpOutline {
 
-    /* 【TCP 协议: 对应的 IO 流类似与听筒和话筒】
+    /* 【TCP 协议: 对应的 IO 流类似于听筒和话筒】
 
 	• 1.客户端
 		○ 创建Socket连接服务端(指定ip地址,端口号)通过ip地址找对应的服务器

@@ -25,7 +25,7 @@ public class A3_UdpSend {
         DatagramPacket packet =                                        // 创建Packet相当于创建集装箱
                 new DatagramPacket(
                         str.getBytes(), str.getBytes().length,
-                        InetAddress.getByName("127.0.0.1"), 12345); // 指定 IP 的接收端
+                        InetAddress.getByName("192.168.137.1"), 12345); // 指定 IP 的接收端
         System.out.println("数据已发送");
         socket.send(packet);                                            // 发送数据
         socket.close();

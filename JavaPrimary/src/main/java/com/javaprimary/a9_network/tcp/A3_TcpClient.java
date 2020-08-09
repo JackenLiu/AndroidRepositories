@@ -20,7 +20,7 @@ public class A3_TcpClient {
 
     // 测试优化
     public static void testOptimize() throws IOException {
-        Socket socket = new Socket("127.0.0.1", 9999);            // 创建Socket
+        Socket socket = new Socket("192.168.137.1", 9999);            // 创建Socket
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(socket.getInputStream()));    // 对输入流封装
         PrintStream ps = new PrintStream(socket.getOutputStream()); // 对输出流封装
