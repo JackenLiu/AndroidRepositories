@@ -15,6 +15,9 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.androidprimary.animation.primary.frame.FrameAnimationActivity;
 import com.androidprimary.animation.primary.property.PropertyActivity;
 import com.androidprimary.animation.primary.view.ViewAnimationActivity;
+import com.androidprimary.animation.transition.activity.FirstTransactionActivity;
+import com.androidprimary.animation.transition.reveal.RevealActivity;
+import com.androidprimary.animation.transition.scene.SceneActivity;
 import com.androidprimary.asynctask.DownloadActivity;
 import com.androidprimary.dialog.AlertDialogActivity;
 import com.androidprimary.dialog.PopupWindowActivity;
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Class aClass = PropertyActivity.class;
+        Class aClass = SceneActivity.class;
 
         startActivity(new Intent(this, aClass));
     }

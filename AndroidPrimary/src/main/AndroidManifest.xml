@@ -21,6 +21,10 @@
         <activity android:name=".animation.primary.view.ViewAnimationActivity" />
         <activity android:name=".viewpager.TabViewPagerActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
+        <activity android:name=".animation.transition.activity.FirstTransactionActivity" />
+        <activity android:name=".animation.transition.activity.SecondTransactionActivity" />
+        <activity android:name=".animation.transition.reveal.RevealActivity" />
+        <activity android:name=".animation.transition.scene.SceneActivity" />
         <activity android:name=".fragment.FragmentBActivity" />
         <activity android:name=".fragment.FragmentAActivity" />
         <activity android:name=".intent.SecondActivity" />
