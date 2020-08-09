@@ -16,6 +16,9 @@
         <activity android:name=".net.udp.android.UdpActivity" />
         <activity android:name=".net.tcp.TcpActivity" />
         <activity android:name=".net.http.HttpActivity" />
+        <activity android:name=".animation.primary.frame.FrameAnimationActivity" />
+        <activity android:name=".animation.primary.property.PropertyActivity" />
+        <activity android:name=".animation.primary.view.ViewAnimationActivity" />
         <activity android:name=".viewpager.TabViewPagerActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".fragment.FragmentBActivity" />

@@ -12,6 +12,9 @@ import android.widget.PopupWindow;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.androidprimary.animation.primary.frame.FrameAnimationActivity;
+import com.androidprimary.animation.primary.property.PropertyActivity;
+import com.androidprimary.animation.primary.view.ViewAnimationActivity;
 import com.androidprimary.asynctask.DownloadActivity;
 import com.androidprimary.dialog.AlertDialogActivity;
 import com.androidprimary.dialog.PopupWindowActivity;
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Class aClass = TcpActivity.class;
+        Class aClass = PropertyActivity.class;
 
         startActivity(new Intent(this, aClass));
     }

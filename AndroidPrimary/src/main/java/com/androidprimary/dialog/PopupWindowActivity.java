@@ -38,7 +38,7 @@ public class PopupWindowActivity extends AppCompatActivity {
                 window.setTouchable(true);
 
                 // 动画
-                window.setAnimationStyle(R.style.translate_anim);
+                window.setAnimationStyle(R.style.popup_window_translate_anim);
 
                 window.showAsDropDown(btn, 10, 10);
 
