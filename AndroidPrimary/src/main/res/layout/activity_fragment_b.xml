@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FragmentBActivity">
+    tools:context=".ui.fragment.FragmentBActivity">
 
     <fragment
         android:id="@+id/fg"
-        android:name="com.androidprimary.fragment.Afragment"
+        android:name="com.androidprimary.ui.fragment.Afragment"
         android:layout_width="300dp"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/fg1"
-        android:name="com.androidprimary.fragment.Afragment"
+        android:name="com.androidprimary.ui.fragment.Afragment"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="400dp"

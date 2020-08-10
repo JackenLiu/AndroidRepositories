@@ -4,7 +4,7 @@
     android:id="@+id/activity_view_animation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".animation.primary.view.ViewAnimationActivity">
+    tools:context=".view.animation.primary.view.ViewAnimationActivity">
 
     <LinearLayout
         android:background="@drawable/edge"

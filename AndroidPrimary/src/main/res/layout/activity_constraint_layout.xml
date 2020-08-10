@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".layout.ConstraintLayoutActivity">
+    tools:context=".ui.layout.ConstraintLayoutActivity">
 
     <!--   bias 偏移量 默认 0.5（代表居中） -->
 

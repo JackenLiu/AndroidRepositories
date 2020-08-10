@@ -10,33 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <service android:name=".service.MyService" />
+        <activity android:name=".view.surfaceview.SurfaceViewActivity"></activity>
 
         <activity android:name=".service.ServiceActivity" />
+
         <activity android:name=".net.udp.android.UdpActivity" />
         <activity android:name=".net.tcp.TcpActivity" />
         <activity android:name=".net.http.HttpActivity" />
-        <activity android:name=".animation.primary.frame.FrameAnimationActivity" />
-        <activity android:name=".animation.primary.property.PropertyActivity" />
-        <activity android:name=".animation.primary.view.ViewAnimationActivity" />
-        <activity android:name=".viewpager.TabViewPagerActivity" />
-        <activity android:name=".viewpager.ViewPagerActivity" />
-        <activity android:name=".animation.transition.activity.FirstTransactionActivity" />
-        <activity android:name=".animation.transition.activity.SecondTransactionActivity" />
-        <activity android:name=".animation.transition.reveal.RevealActivity" />
-        <activity android:name=".animation.transition.scene.SceneActivity" />
-        <activity android:name=".fragment.FragmentBActivity" />
-        <activity android:name=".fragment.FragmentAActivity" />
-        <activity android:name=".intent.SecondActivity" />
-        <activity android:name=".intent.FirstActivity" />
-        <activity android:name=".dialog.PopupWindowActivity" />
-        <activity android:name=".dialog.AlertDialogActivity" />
-        <activity android:name=".menu.PopupMenuActivity" />
-        <activity android:name=".menu.ContextMenuActivity" />
-        <activity android:name=".menu.OptionMenuActivity" />
-        <activity android:name=".layout.ConstraintLayoutActivity" />
-        <activity android:name=".layout.GridLayoutActivity" />
-        <activity android:name=".layout.TableLayoutActivity" />
+        <activity android:name=".view.animation.primary.frame.FrameAnimationActivity" />
+        <activity android:name=".view.animation.primary.property.PropertyActivity" />
+        <activity android:name=".view.animation.primary.view.ViewAnimationActivity" />
+        <activity android:name=".ui.viewpager.TabViewPagerActivity" />
+        <activity android:name=".ui.viewpager.ViewPagerActivity" />
+        <activity android:name=".view.animation.transition.activity.FirstTransactionActivity" />
+        <activity android:name=".view.animation.transition.activity.SecondTransactionActivity" />
+        <activity android:name=".view.animation.transition.reveal.RevealActivity" />
+        <activity android:name=".view.animation.transition.scene.SceneActivity" />
+        <activity android:name=".ui.fragment.FragmentBActivity" />
+        <activity android:name=".ui.fragment.FragmentAActivity" />
+        <activity android:name=".ui.intent.SecondActivity" />
+        <activity android:name=".ui.intent.FirstActivity" />
+        <activity android:name=".ui.dialog.PopupWindowActivity" />
+        <activity android:name=".ui.dialog.AlertDialogActivity" />
+        <activity android:name=".ui.menu.PopupMenuActivity" />
+        <activity android:name=".ui.menu.ContextMenuActivity" />
+        <activity android:name=".ui.menu.OptionMenuActivity" />
+        <activity android:name=".ui.layout.ConstraintLayoutActivity" />
+        <activity android:name=".ui.layout.GridLayoutActivity" />
+        <activity android:name=".ui.layout.TableLayoutActivity" />
         <activity android:name=".asynctask.DownloadActivity" />
         <activity android:name=".asynctask.AsyncTaskActivity" />
         <activity android:name=".handler.HandlerActivity" />
@@ -47,14 +48,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".service.MyService" />
     </application>
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".animation.transition.activity.FirstTransactionActivity">
+    tools:context=".view.animation.transition.activity.FirstTransactionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

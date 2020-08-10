@@ -4,7 +4,7 @@
     android:id="@+id/activity_frame_animation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".animation.primary.frame.FrameAnimationActivity">
+    tools:context=".view.animation.primary.frame.FrameAnimationActivity">
 
     <View
         android:id="@+id/view"
