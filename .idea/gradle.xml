@@ -19,7 +19,6 @@
             <option value="$PROJECT_DIR$/UiHigherDemo" />
             <option value="$PROJECT_DIR$/UiPrimaryDemo" />
             <option value="$PROJECT_DIR$/aidldemo" />
-            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
