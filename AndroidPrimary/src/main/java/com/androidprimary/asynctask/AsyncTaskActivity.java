@@ -71,4 +71,10 @@ public class AsyncTaskActivity extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+//        new DownloadAsyncTask().cancel()
+    }
 }

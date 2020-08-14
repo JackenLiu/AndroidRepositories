@@ -10,10 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.surfaceview.SurfaceViewActivity"></activity>
-
+        <activity android:name=".aidl.AidlActivity"></activity>
+        <activity android:name=".ui.listview.ListViewActivity" />
+        <activity android:name=".view.surfaceview.SurfaceViewActivity" />
         <activity android:name=".service.ServiceActivity" />
-
+        <activity android:name=".view.touch.BaseContentActivity" />
+        <activity android:name=".view.touch.CategoryActivity" />
+        <activity android:name=".view.touch.SimpleActivity" />
+        <activity android:name=".view.touch.TouchSystemActivity" />
         <activity android:name=".net.udp.android.UdpActivity" />
         <activity android:name=".net.tcp.TcpActivity" />
         <activity android:name=".net.http.HttpActivity" />
@@ -48,14 +52,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service android:name=".service.MyService" />
+        <service android:name=".aidl.AidlService" >
+            <intent-filter>
+                <action android:name="com.aidlserver" />
+            </intent-filter>
+        </service>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

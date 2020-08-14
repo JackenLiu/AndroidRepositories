@@ -1,7 +1,9 @@
+include ':aidldemo'
+include ':UiHigherDemo'
 include ':UiPrimaryDemo'
 include ':MobileSafe'
 include ':AndroidPrimary'
 include ':JavaReview'
 include ':JavaPrimary'
 include ':app'
-rootProject.name = "AndroidRepositories"
+rootProject.name  = "AndroidRepositories"
