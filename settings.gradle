@@ -1,7 +1,6 @@
 include ':aidldemo'
 include ':UiHigherDemo'
 include ':UiPrimaryDemo'
-include ':MobileSafe'
 include ':AndroidPrimary'
 include ':JavaReview'
 include ':JavaPrimary'
