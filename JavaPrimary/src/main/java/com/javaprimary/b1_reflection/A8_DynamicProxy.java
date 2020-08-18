@@ -15,12 +15,13 @@ public class A8_DynamicProxy {
         ui.delete();
         System.out.println("-----------------------");
 
-        // 测试 User 类添加代理功能
+        // 测试 User 类添加代理功能，让代理的 invoke 方法去调用对象的方法，就可以在里面做其他操作
         MyInvocationHandler m = new MyInvocationHandler(ui);
         User u = (User) Proxy.newProxyInstance(ui.getClass().getClassLoader(),
                 ui.getClass().getInterfaces(), m);
         u.add();
         u.delete();
+        System.out.println("-----------------------");
 
         StudentImp si = new StudentImp();
         si.login();
@@ -44,9 +45,9 @@ public class A8_DynamicProxy {
 
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-            System.out.println("权限校验");
+            System.out.println("====== 权限校验");
             Object obj = method.invoke(target, args);
-            System.out.println("日志记录");
+            System.out.println("====== 日志记录");
             return obj;
         }
     }

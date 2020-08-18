@@ -1,3 +1,4 @@
+include ':ArchitectDemo'
 include ':MobileSafeApp'
 include ':aidldemo'
 include ':UiHigherDemo'

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.PixelFormat;
+import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.telephony.PhoneStateListener;
@@ -115,12 +116,17 @@ public class AddressService extends Service {
         final WindowManager.LayoutParams params = mParams;
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         params.width = WindowManager.LayoutParams.WRAP_CONTENT;
+
         params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-//                | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE	默认能够被触摸
+//                | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE	// 默认能够被触摸
                 | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
         params.format = PixelFormat.TRANSLUCENT;
-        //在响铃的时候显示吐司,和电话类型一致
-        params.type = WindowManager.LayoutParams.TYPE_PHONE;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            params.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
+        } else {
+            // 在响铃的时候显示吐司,和电话类型一致
+            params.type = WindowManager.LayoutParams.TYPE_PHONE;
+        }
         params.setTitle("Toast");
 
         //指定吐司的所在位置(将吐司指定在左上角)
