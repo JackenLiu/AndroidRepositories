@@ -11,6 +11,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.architectdemo.architecture_design.mvc.controller.MvcActivity;
 import com.architectdemo.handler.HandlerActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Class aClass = HandlerActivity.class;
+        Class aClass = MvcActivity.class;
         startActivity(new Intent(this, aClass));
 
     }
