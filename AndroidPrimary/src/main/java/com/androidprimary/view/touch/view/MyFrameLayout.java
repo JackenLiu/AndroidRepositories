@@ -66,8 +66,8 @@ public class MyFrameLayout extends FrameLayout {
         }
 
         result = super.onInterceptTouchEvent(ev);
+//        Log.e(TAG, "onInterceptTouchEvent - result: " + result);
         return result;
-
     }
 
     @Override

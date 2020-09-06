@@ -1,6 +1,7 @@
 package com.uihigherdemo;
 
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;

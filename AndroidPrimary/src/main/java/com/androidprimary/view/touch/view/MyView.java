@@ -51,14 +51,14 @@ public class MyView extends View {
         switch (action) {
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, "onTouchEvent - ACTION_DOWN");
-                //getParent().requestDisallowInterceptTouchEvent(true);
-                // return true ;
+//                getParent().requestDisallowInterceptTouchEvent(true);
+//                return true;
             case MotionEvent.ACTION_MOVE:
                 Log.e(TAG, "onTouchEvent - ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
                 Log.e(TAG, "onTouchEvent - ACTION_UP");
-                break;
+            break;
         }
         result = super.onTouchEvent(event);
         return result;

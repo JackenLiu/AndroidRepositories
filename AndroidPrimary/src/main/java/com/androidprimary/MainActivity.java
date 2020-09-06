@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidprimary.aidl.AidlActivity;
 import com.androidprimary.ui.listview.ListViewActivity;
+import com.androidprimary.view.touch.TouchSystemActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Class aClass = AidlActivity.class;
+//        Class aClass = AidlActivity.class;
+        Class aClass = TouchSystemActivity.class;
 
         startActivity(new Intent(this, aClass));
 

@@ -20,6 +20,7 @@ Android Ui 高级，一些 Api 的使用，高级绘制
 
 ## ArchitectDemo（架构师 Demo）
 Android 架构师专题知识点 Demo
+更新：架构模式、Handler 源码分析与手写 Handler
 
 ## MobileSafeApp（Android 经典，黑马手机卫士 Demo）
 黑马程序员的手机卫士 Demo，汇集大量基础经典知识
