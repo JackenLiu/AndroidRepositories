@@ -8,6 +8,7 @@ Android 仓库、知识点总成，包括 Java 基础 module，Android 各种控
 
 ## JavaReview（Java 知识点回顾的经典 Demo）
 Java 知识点系统复习
+![示例动态图（加载失败需 VPN）](https://github.com/JackenLiu/AndroidRepositories/blob/master/javaprimary.png)
 
 ## UiPrimaryDemo（Android Ui 基础控件的用法）
 Android Ui 基础
@@ -24,3 +25,4 @@ Android 架构师专题知识点 Demo
 
 ## MobileSafeApp（Android 经典，黑马手机卫士 Demo）
 黑马程序员的手机卫士 Demo，汇集大量基础经典知识
+![示例动态图（加载失败需 VPN）](https://github.com/JackenLiu/AndroidRepositories/blob/master/%E5%AE%89%E5%85%A8%E5%8D%AB%E5%A3%AB.jpeg)
