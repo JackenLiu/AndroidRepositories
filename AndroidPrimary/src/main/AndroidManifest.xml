@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".aidl.AidlActivity"></activity>
+        <activity android:name=".activity.B_Activity"></activity>
+        <activity android:name=".activity.A_Activity" />
+        <activity android:name=".aidl.AidlActivity" />
         <activity android:name=".ui.listview.ListViewActivity" />
         <activity android:name=".view.surfaceview.SurfaceViewActivity" />
         <activity android:name=".service.ServiceActivity" />
@@ -54,17 +56,17 @@
         </activity>
 
         <service android:name=".service.MyService" />
-        <service android:name=".aidl.AidlService" >
+        <service android:name=".aidl.AidlService">
             <intent-filter>
                 <action android:name="com.aidlserver" />
             </intent-filter>
         </service>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
