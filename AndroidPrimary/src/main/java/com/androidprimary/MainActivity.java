@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.androidprimary.ui.imageview.LargerImageActivity;
 import com.androidprimary.ui.listview.ArrayAdapterActivity;
 import com.androidprimary.ui.listview.ListViewComplexActivity;
 import com.androidprimary.ui.listview.ListViewPrimaryActivity;
@@ -20,11 +21,12 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = AidlActivity.class;
 //        Class aClass = TouchSystemActivity.class;
 //        Class aClass = ListViewExtendsActivity.class;
-        Class aClass = ListViewPrimaryActivity.class;
+//        Class aClass = ListViewPrimaryActivity.class;
 //        Class aClass = ListViewComplexActivity.class;
 //        Class aClass = ArrayAdapterActivity.class;
 //        Class aClass = SimpleAdapterActivity.class;
 //        Class aClass = A_Activity.class;
+        Class aClass = LargerImageActivity.class;
 
         startActivity(new Intent(this, aClass));
 
