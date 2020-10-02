@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.listview.ListViewExtendsActivity">
+    tools:context=".ui.listview.ArrayAdapterActivity">
 
     <ListView
-        android:id="@+id/lv"
+        android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

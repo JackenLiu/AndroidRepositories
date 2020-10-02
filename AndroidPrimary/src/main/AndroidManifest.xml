@@ -10,10 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.B_Activity"></activity>
+        <activity android:name=".ui.listview.SimpleAdapterActivity"></activity>
+        <activity android:name=".ui.listview.ArrayAdapterActivity" />
+        <activity android:name=".ui.listview.ListViewComplexActivity" />
+        <activity android:name=".ui.listview.ListViewPrimaryActivity" />
+        <activity android:name=".activity.B_Activity" />
         <activity android:name=".activity.A_Activity" />
         <activity android:name=".aidl.AidlActivity" />
-        <activity android:name=".ui.listview.ListViewActivity" />
+        <activity android:name=".ui.listview.ListViewExtendsActivity" />
         <activity android:name=".view.surfaceview.SurfaceViewActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".view.touch.BaseContentActivity" />
@@ -62,12 +66,12 @@
             </intent-filter>
         </service>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

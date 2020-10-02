@@ -16,7 +16,7 @@ import com.androidprimary.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewActivity extends AppCompatActivity {
+public class ListViewExtendsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,6 @@ public class ListViewActivity extends AppCompatActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView != null) {
                 Log.d("------", convertView.getHeight() + "");
-
             }
 
             if (position % 2 == 0) {

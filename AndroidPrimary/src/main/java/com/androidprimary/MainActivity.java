@@ -5,10 +5,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.androidprimary.activity.A_Activity;
-import com.androidprimary.aidl.AidlActivity;
-import com.androidprimary.ui.listview.ListViewActivity;
-import com.androidprimary.view.touch.TouchSystemActivity;
+import com.androidprimary.ui.listview.ArrayAdapterActivity;
+import com.androidprimary.ui.listview.ListViewComplexActivity;
+import com.androidprimary.ui.listview.ListViewPrimaryActivity;
+import com.androidprimary.ui.listview.SimpleAdapterActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +19,12 @@ public class MainActivity extends AppCompatActivity {
 
 //        Class aClass = AidlActivity.class;
 //        Class aClass = TouchSystemActivity.class;
-        Class aClass = A_Activity.class;
+//        Class aClass = ListViewExtendsActivity.class;
+//        Class aClass = ListViewPrimaryActivity.class;
+//        Class aClass = ListViewComplexActivity.class;
+//        Class aClass = ArrayAdapterActivity.class;
+        Class aClass = SimpleAdapterActivity.class;
+//        Class aClass = A_Activity.class;
 
         startActivity(new Intent(this, aClass));
 
