@@ -47,12 +47,12 @@ public class ListViewPrimaryActivity extends AppCompatActivity {
             TextView textView;
             if (convertView == null) {
                 // 说明没有可以重用的 view 对象，需要创建新的 view 对象
-                System.out.println("创建新的对象: "+position);
                 textView = new TextView(ListViewPrimaryActivity.this);
+                System.out.println("创建新的对象: " + position + ": " + textView);
             } else {
                 // 当前的 convertView 可以被重新使用
-                System.out.println("重用旧的对象: "+position);
                 textView = (TextView) convertView;
+                System.out.println("重用旧的对象: " + position + ": " + convertView);
             }
             // 给 textView 设置数据
             textView.setText("当前位置：" + position);

@@ -67,6 +67,12 @@ public class ListViewExtendsActivity extends AppCompatActivity {
             convertView.setTag(holder);
 
         } else {
+            /*
+            如果这里不使用 ViewHolder ，则会出现大量重复代码
+            ImageView iv = convertView.findViewById(R.id.iv);
+            iv.setImageResource(R.drawable.color_tab_icon_me);
+            ...
+             */
             holder = (ViewHolder) convertView.getTag();
         }
         holder.iv.setImageResource(R.drawable.color_tab_icon_me);

@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = AidlActivity.class;
 //        Class aClass = TouchSystemActivity.class;
 //        Class aClass = ListViewExtendsActivity.class;
-//        Class aClass = ListViewPrimaryActivity.class;
+        Class aClass = ListViewPrimaryActivity.class;
 //        Class aClass = ListViewComplexActivity.class;
 //        Class aClass = ArrayAdapterActivity.class;
-        Class aClass = SimpleAdapterActivity.class;
+//        Class aClass = SimpleAdapterActivity.class;
 //        Class aClass = A_Activity.class;
 
         startActivity(new Intent(this, aClass));
