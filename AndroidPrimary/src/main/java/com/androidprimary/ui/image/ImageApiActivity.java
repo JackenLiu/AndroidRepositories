@@ -16,6 +16,7 @@ import com.androidprimary.R;
 public class ImageApiActivity extends AppCompatActivity {
 
     private ImageView imageView;
+    private ImageView imageView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +24,19 @@ public class ImageApiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_image_api);
 
         imageView = findViewById(R.id.imageView);
+        imageView2 = findViewById(R.id.imageView2);
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.n0);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.n3);
         Bitmap copyBitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), bitmap.getConfig());
 
         // 把空图片画到画布上
         Canvas canvas = new Canvas(copyBitmap);
         Matrix matrix = new Matrix();
 //        matrix.setRotate(30, copyBitmap.getWidth(), copyBitmap.getHeight());
-        matrix.setScale(1.5f, 1f);
-//        matrix.preTranslate(100, 150);
+        matrix.setScale(-1f, 1f);
+        matrix.postTranslate(copyBitmap.getWidth(), 0);
         canvas.drawBitmap(bitmap, matrix, new Paint());
-        imageView.setImageBitmap(copyBitmap);
+        imageView.setImageBitmap(bitmap);
+        imageView2.setImageBitmap(copyBitmap);
     }
 }
