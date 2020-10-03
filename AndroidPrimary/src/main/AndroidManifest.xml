@@ -3,19 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.androidprimary">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="q">
-        <activity android:name=".ui.image.DrawImageActivity"></activity>
+        <activity android:name=".ui.video.VideoViewActivity"></activity>
+        <activity android:name=".ui.video.SurfaceViewVideoActivity" />
+        <activity android:name=".ui.image.DrawImageActivity" />
         <activity android:name=".ui.image.ImageApiActivity" />
         <activity android:name=".ui.imageview.LargerImageActivity" />
         <activity android:name=".ui.listview.SimpleAdapterActivity" />
@@ -74,12 +74,13 @@
             </intent-filter>
         </service>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

@@ -12,6 +12,8 @@ import com.androidprimary.ui.listview.ArrayAdapterActivity;
 import com.androidprimary.ui.listview.ListViewComplexActivity;
 import com.androidprimary.ui.listview.ListViewPrimaryActivity;
 import com.androidprimary.ui.listview.SimpleAdapterActivity;
+import com.androidprimary.ui.video.SurfaceViewVideoActivity;
+import com.androidprimary.ui.video.VideoViewActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = A_Activity.class;
 //        Class aClass = LargerImageActivity.class;
 //        Class aClass = ImageApiActivity.class;
-        Class aClass = DrawImageActivity.class;
+//        Class aClass = DrawImageActivity.class;
+//        Class aClass = SurfaceViewVideoActivity.class;
+        Class aClass = VideoViewActivity.class;
 
         startActivity(new Intent(this, aClass));
 
