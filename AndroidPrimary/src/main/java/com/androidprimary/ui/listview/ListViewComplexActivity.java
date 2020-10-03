@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
@@ -53,6 +55,10 @@ public class ListViewComplexActivity extends AppCompatActivity {
                 view = View.inflate(ListViewComplexActivity.this, R.layout.item_complex_activity, null);
             } else {
                 view = convertView;
+                TranslateAnimation animation = new TranslateAnimation(300, 0, 0, 0);
+                animation.setDuration(500);
+                animation.setInterpolator(new AccelerateDecelerateInterpolator());
+                view.startAnimation(animation);
             }
 
             return view;
