@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class VideoViewActivity extends AppCompatActivity {
 
-//    private String url = "https://media.w3.org/2010/05/sintel/trailer.mp4";
+    //    private String url = "https://media.w3.org/2010/05/sintel/trailer.mp4";
     private String url = "https://v-cdn.zjol.com.cn/276990.mp4";
 
     private ProgressBar progressBar;

@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidprimary.R;
 
+/**
+ * 帧动画
+ */
 public class FrameAnimationActivity extends AppCompatActivity {
 
     private AnimationDrawable animationDrawable;

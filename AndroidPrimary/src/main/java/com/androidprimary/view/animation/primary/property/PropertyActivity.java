@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,14 @@ public class PropertyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property);
+
+        final Button button = findViewById(R.id.bt);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button.setTranslationY(-30);
+            }
+        });
     }
 
     public void onClick(View view) {
@@ -38,17 +47,21 @@ public class PropertyActivity extends AppCompatActivity {
 //                valueAnimator.start();
 //                break;
             case R.id.viewAlphaAnimation:
+                // 属性动画
                 Animator alphaAnimator = AnimatorInflater.loadAnimator(this, R.animator.alpha);
                 alphaAnimator.setTarget(view);
                 alphaAnimator.start();
                 break;
             case R.id.viewScaleAnimation:
+                // 属性动画
                 ofFloat(view, "scaleX", 1.0f, 3.0f).start();
                 break;
             case R.id.viewTranslateAnimation:
+                // view 动画
                 view.animate().translationX(500f).setDuration(1000).start();
                 break;
             case R.id.viewRotateAnimation:
+                // view 动画
                 view.animate().rotation(720).start();
                 break;
             case R.id.viewSetAnimation:

@@ -8,11 +8,26 @@
     tools:context=".MainActivity">
 
 
-    <ListView
-        android:id="@+id/lv"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="500dp"
+        android:background="@color/colorAccent"
+        android:text="一键登陆"
+        android:onClick="a"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="68px"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.androidprimary.view.custom.TextViewFitPt
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="一键登陆"
+        android:onClick="b"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textPtSize="24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
