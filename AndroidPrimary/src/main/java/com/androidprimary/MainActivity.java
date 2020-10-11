@@ -57,4 +57,9 @@ public class MainActivity extends AppCompatActivity {
         TextView view1 = (TextView) view;
         view1.setText("就是简单的的");
     }
+
+    public void c(View view) {
+        TextView view1 = (TextView) view;
+        view1.setText("就是简单的的第三方");
+    }
 }
