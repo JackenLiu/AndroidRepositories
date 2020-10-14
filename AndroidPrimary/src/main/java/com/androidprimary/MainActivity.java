@@ -16,6 +16,7 @@ import com.androidprimary.ui.listview.ListViewPrimaryActivity;
 import com.androidprimary.ui.listview.SimpleAdapterActivity;
 import com.androidprimary.ui.video.SurfaceViewVideoActivity;
 import com.androidprimary.ui.video.VideoViewActivity;
+import com.androidprimary.ui.viewpager.ViewPagerActivity;
 import com.androidprimary.view.animation.primary.frame.FrameAnimationActivity;
 import com.androidprimary.view.animation.primary.property.PropertyActivity;
 import com.androidprimary.view.animation.primary.view.ViewAnimationHeiMaActivity;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = TouchSystemActivity.class;
 //        Class aClass = ListViewExtendsActivity.class;
 //        Class aClass = ListViewPrimaryActivity.class;
-        Class aClass = ListViewComplexActivity.class;
+//        Class aClass = ListViewComplexActivity.class;
 //        Class aClass = ArrayAdapterActivity.class;
 //        Class aClass = SimpleAdapterActivity.class;
 //        Class aClass = A_Activity.class;
@@ -43,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = FrameAnimationActivity.class;
 //        Class aClass = PropertyActivity.class;
 //        Class aClass = ViewAnimationHeiMaActivity.class;
+        Class aClass = ViewPagerActivity.class;
 
-//        startActivity(new Intent(this, aClass));
+        startActivity(new Intent(this, aClass));
 
     }
 

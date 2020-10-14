@@ -1,3 +1,4 @@
+include ':CustomWidget'
 include ':KotlinPrimary'
 include ':ArchitectDemo'
 include ':MobileSafeApp'
