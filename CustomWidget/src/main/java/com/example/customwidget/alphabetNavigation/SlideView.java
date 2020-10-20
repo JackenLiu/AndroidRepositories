@@ -202,7 +202,7 @@ public class SlideView extends View {
             case MotionEvent.ACTION_MOVE:
                 float y = event.getY();
                 float diff = Math.abs(y - mInitDownY);
-                if (diff > mTouchSlop && !mIsBeingDragger) {
+                if (/*diff > mTouchSlop &&*/ !mIsBeingDragger) {
                     mIsBeingDragger = true;
                 }
                 if (mIsBeingDragger) {

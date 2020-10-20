@@ -16,6 +16,7 @@ import android.view.ViewConfiguration;
 import androidx.annotation.Nullable;
 
 import com.example.customwidget.DimensionsUtil;
+import com.example.customwidget.MyScrollView;
 
 public class HorizontalSlideLetterNavigationView extends View {
     private Context mContext;
@@ -204,9 +205,9 @@ public class HorizontalSlideLetterNavigationView extends View {
             canvas.restore();
         }
 
-//        mPaint.setColor(Color.BLUE);
-//        mPaint.setAlpha(60);
-//        canvas.drawRect(mIsDownRect, mPaint);
+        mPaint.setColor(Color.WHITE);
+        mPaint.setAlpha(60);
+        canvas.drawRect(mIsDownRect, mPaint);
     }
 
 
@@ -224,6 +225,8 @@ public class HorizontalSlideLetterNavigationView extends View {
                 // 如果点击不在矩形区域内，禁止消费事件
                 if (!mIsDownRect.contains(event.getX(), event.getY())) {
                     return false;
+                } else {
+                    scrollView.disableScroll(true);
                 }
                 mInitDownX = initDownX;
                 break;
@@ -253,6 +256,7 @@ public class HorizontalSlideLetterNavigationView extends View {
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
+                scrollView.disableScroll(false);
                 setSelectLetter(mLetters[intChooseIndex]);
 
                 mStartEndAnim = false;
@@ -268,6 +272,12 @@ public class HorizontalSlideLetterNavigationView extends View {
 
     private boolean isBeginSelectLetterFromOutSide = false;
     private String strSelectLetter;
+    private MyScrollView scrollView;
+
+    public void setScrollView(MyScrollView scrollView) {
+        this.scrollView = scrollView;
+    }
+
 
     public void setSelectLetter(String letter) {
         strSelectLetter = letter;
