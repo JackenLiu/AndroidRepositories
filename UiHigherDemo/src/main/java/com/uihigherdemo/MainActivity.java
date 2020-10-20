@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.uihigherdemo.event.SlideConflictActivity;
 import com.uihigherdemo.explosion.ExplosionTextActivity;
 import com.uihigherdemo.expose.ExposeTextActivity;
 
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
 //        final Class toActivity = XferModeTestActivity.class;
 //        final Class toActivity = ExplosionTextActivity.class;
-        final Class toActivity = ExposeTextActivity.class;
+//        final Class toActivity = ExposeTextActivity.class;
+        final Class toActivity = SlideConflictActivity.class;
 
         startActivity(new Intent(this, toActivity));
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".expose.ExposeTextActivity"></activity>
+        <activity android:name=".event.SlideConflictActivity"></activity>
+        <activity android:name=".expose.ExposeTextActivity" />
         <activity android:name=".explosion.ExplosionTextActivity" />
         <activity android:name=".xfermode.XferModeTestActivity" />
         <activity android:name=".MainActivity">
