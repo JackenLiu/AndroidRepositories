@@ -1,4 +1,4 @@
-package com.uihigherdemo.event;
+package com.uihigherdemo.event.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

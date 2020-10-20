@@ -2,9 +2,12 @@ package com.uihigherdemo.event;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,90 +18,35 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.uihigherdemo.R;
+import com.uihigherdemo.event.fragment.AFragment;
+import com.uihigherdemo.event.fragment.BFragment;
 
 public class SlideConflictActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slide_conflict);
-        recyclerView = findViewById(R.id.rv);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-        recyclerView.setAdapter(new RecyclerView.Adapter() {
+        viewPager = findViewById(R.id.vp);
+        viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @NonNull
             @Override
-            public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_search_alphabet,
-                        parent, false);
-                return new MyViewHolder(view);
+            public Fragment getItem(int position) {
+                if (position == 0) {
+                    return new AFragment();
+                } else {
+                    return new BFragment();
+                }
             }
 
             @Override
-            public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
-                MyViewHolder myViewHolder = (MyViewHolder) holder;
-                myViewHolder.recyclerView.setLayoutManager(new GridLayoutManager(
-                        SlideConflictActivity.this, 3, RecyclerView.HORIZONTAL, false));
-                myViewHolder.recyclerView.setAdapter(new RecyclerView.Adapter() {
-                    @NonNull
-                    @Override
-                    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                        View view = new ItemView(parent.getContext());
-                        view.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-
-                            }
-                        });
-                        return new ItemViewHolder(view);
-                    }
-
-                    @Override
-                    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
-                        ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
-                        itemViewHolder.view.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Log.d("-----------", "============");
-                                Toast.makeText(SlideConflictActivity.this,
-                                        "点击" + position, Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-
-                    @Override
-                    public int getItemCount() {
-                        return 10;
-                    }
-                });
-            }
-
-            @Override
-            public int getItemCount() {
-                return 15;
+            public int getCount() {
+                return 2;
             }
         });
+
     }
 
-    private class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView tv;
-        private RecyclerView recyclerView;
-
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            tv = itemView.findViewById(R.id.tv_title);
-            recyclerView = itemView.findViewById(R.id.rv);
-        }
-    }
-
-    private class ItemViewHolder extends RecyclerView.ViewHolder {
-        private View view;
-
-        public ItemViewHolder(@NonNull View itemView) {
-            super(itemView);
-            view = itemView;
-        }
-    }
 }
