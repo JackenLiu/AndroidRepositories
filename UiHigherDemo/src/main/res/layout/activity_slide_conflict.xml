@@ -7,7 +7,7 @@
     tools:context=".event.SlideConflictActivity">
 
 
-    <androidx.viewpager.widget.ViewPager
+    <com.uihigherdemo.event.view.MyViewPager
         android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

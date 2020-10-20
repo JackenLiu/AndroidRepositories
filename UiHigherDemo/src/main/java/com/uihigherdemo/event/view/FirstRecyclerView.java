@@ -25,18 +25,25 @@ public class FirstRecyclerView extends RecyclerView {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         Log.d("First, ", "dispatchTouchEvent: " + ev.getAction());
-        return super.dispatchTouchEvent(ev);
+        return !disable && super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent e) {
         Log.d("First, ", "onInterceptTouchEvent: " + e.getAction());
-        return super.onInterceptTouchEvent(e);
+        return !disable && super.onInterceptTouchEvent(e);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent e) {
         Log.d("First, ", "onTouchEvent: " + e.getAction());
-        return super.onTouchEvent(e);
+        return !disable && super.onTouchEvent(e);
+    }
+
+
+    private Boolean disable = false;
+
+    public void disableScroll(Boolean disable) {
+        this.disable = disable;
     }
 }

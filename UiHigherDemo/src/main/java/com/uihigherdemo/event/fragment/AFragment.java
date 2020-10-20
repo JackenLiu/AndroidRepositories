@@ -16,12 +16,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.uihigherdemo.R;
+import com.uihigherdemo.event.SearchViewController;
+import com.uihigherdemo.event.view.FirstRecyclerView;
 import com.uihigherdemo.event.view.ItemView;
+import com.uihigherdemo.event.view.StoppableScrollView;
 
 public class AFragment extends Fragment {
 
     private View contentView;
-    private RecyclerView recyclerView;
+    private FirstRecyclerView recyclerView;
 
     @Nullable
     @Override
@@ -86,9 +89,12 @@ public class AFragment extends Fragment {
 
             @Override
             public int getItemCount() {
-                return 15;
+                return 5;
             }
         });
+
+        StoppableScrollView scrollView = contentView.findViewById(R.id.sv);
+        SearchViewController.getInstance(scrollView, recyclerView);
     }
 
 
