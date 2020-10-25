@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7">
+      <module name="AndroidRepositories.aidldemo" target="1.8" />
+      <module name="AndroidRepositories.AndroidPrimary" target="1.8" />
+      <module name="AndroidRepositories.ArchitectDemo" target="1.8" />
+      <module name="AndroidRepositories.KotlinPrimary" target="1.8" />
+      <module name="AndroidRepositories.MobileSafeApp" target="1.8" />
+      <module name="AndroidRepositories.UiHigherDemo" target="1.8" />
+      <module name="AndroidRepositories.UiPrimaryDemo" target="1.8" />
       <module name="JavaPrimary" target="1.7" />
       <module name="JavaReview" target="1.7" />
     </bytecodeTargetLevel>
