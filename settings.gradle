@@ -1,3 +1,5 @@
+include ':UiTools'
+include ':CustomWidget'
 include ':KotlinPrimary'
 include ':ArchitectDemo'
 include ':MobileSafeApp'
