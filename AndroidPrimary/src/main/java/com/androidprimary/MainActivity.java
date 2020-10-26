@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = TouchSystemActivity.class;
 //        Class aClass = ListViewExtendsActivity.class;
 //        Class aClass = ListViewPrimaryActivity.class;
-//        Class aClass = ListViewComplexActivity.class;
+        Class aClass = ListViewComplexActivity.class;
 //        Class aClass = ArrayAdapterActivity.class;
 //        Class aClass = SimpleAdapterActivity.class;
 //        Class aClass = A_Activity.class;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = FrameAnimationActivity.class;
 //        Class aClass = PropertyActivity.class;
 //        Class aClass = ViewAnimationHeiMaActivity.class;
-        Class aClass = ViewPagerActivity.class;
+//        Class aClass = ViewPagerActivity.class;
 
         startActivity(new Intent(this, aClass));
 

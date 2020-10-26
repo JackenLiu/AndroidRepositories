@@ -3,15 +3,19 @@ package com.androidprimary.ui.listview;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import com.androidprimary.R;
+import com.androidprimary.ui.listview.SkewAnimation.SkewAnimation;
 
 public class ListViewComplexActivity extends AppCompatActivity {
 
@@ -23,12 +27,37 @@ public class ListViewComplexActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.ll);
         listView.setAdapter(new MyAdapter());
 
+        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            private int previousFirstVisibleItem = 0;
+            private long previousEventTime = 0;
+            private double speed = 0;
+
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                Log.d("------", totalItemCount + "");
+                if (previousFirstVisibleItem != firstVisibleItem) {
+                    long currTime = System.currentTimeMillis();
+                    long timeToScrollOneElement = currTime - previousEventTime;
+                    speed = ((double) 1 / timeToScrollOneElement) * 1000;
+                    previousFirstVisibleItem = firstVisibleItem;
+                    previousEventTime = currTime;
+                    Log.d("DBG", "Speed: " + speed + " elements/second");
+                }
+            }
+        });
     }
+
+    private int lastIndex;
 
     private class MyAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return 20;
+            return 30;
         }
 
         @Override
@@ -52,14 +81,33 @@ public class ListViewComplexActivity extends AppCompatActivity {
              */
             View view;
             if (convertView == null) {
-                view = View.inflate(ListViewComplexActivity.this, R.layout.item_complex_activity, null);
+                view = View.inflate(ListViewComplexActivity.this, R.layout.item_coupon_page_coupon_list, null);
             } else {
                 view = convertView;
-                TranslateAnimation animation = new TranslateAnimation(300, 0, 0, 0);
-                animation.setDuration(500);
-                animation.setInterpolator(new AccelerateDecelerateInterpolator());
-                view.startAnimation(animation);
+                AnimationSet animationSet = new AnimationSet(true);
+
+                TranslateAnimation translateAnimation = new TranslateAnimation(200, 0, 0, 0);
+                translateAnimation.setDuration(1500);
+                AlphaAnimation alphaAnimation = new AlphaAnimation(0, 1);
+                alphaAnimation.setDuration(1200);
+                SkewAnimation ska = new SkewAnimation();
+                if (position > lastIndex) {
+                    ska.setSkewAngle(3, 0, -3, 0);
+
+                    animationSet.addAnimation(translateAnimation);
+                    animationSet.addAnimation(alphaAnimation);
+                    animationSet.addAnimation(ska);
+                } else {
+                    ska.setSkewAngle(0, 0, 3, 0);
+                    animationSet.addAnimation(ska);
+
+                }
+                ska.setDuration(1200);
+                ska.setInterpolator(new AccelerateDecelerateInterpolator());
+
+                view.startAnimation(animationSet);
             }
+            lastIndex = position;
 
             return view;
         }
