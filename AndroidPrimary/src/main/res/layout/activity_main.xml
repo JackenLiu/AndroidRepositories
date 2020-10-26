@@ -7,38 +7,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <TextView
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:background="@color/colorAccent"
-        android:onClick="a"
-        android:text="一键登陆"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="68px"
+        android:text="181****7973"
+        android:textSize="8sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.androidprimary.view.custom.AutoFitTextView
-
-        android:layout_width="match_parent"
-        android:layout_height="50px"
-        android:layout_marginTop="250dp"
-        android:background="@color/colorAccent"
-        android:onClick="c"
-        android:text="一键登陆"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.androidprimary.view.custom.TextViewFitPt
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:onClick="b"
-        android:text="一键登陆"
-        android:textColor="@android:color/darker_gray"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:textPtSize="24" />
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
