@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.architectdemo.architecture_design.mvc.controller.MvcActivity;
 import com.architectdemo.architecture_design.mvp.view.MvpActivity;
 import com.architectdemo.architecture_design.mvp_extends.login.LoginActivity;
+import com.architectdemo.architecture_design.mvvm.view.MvvmActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Class aClass = LoginActivity.class;
+//        final Class aClass = LoginActivity.class;
+        final Class aClass = MvvmActivity.class;
         startActivity(new Intent(this, aClass));
 
         findViewById(R.id.tv).setOnClickListener(new View.OnClickListener() {
