@@ -14,6 +14,8 @@ import com.androidprimary.ui.listview.ArrayAdapterActivity;
 import com.androidprimary.ui.listview.ListViewComplexActivity;
 import com.androidprimary.ui.listview.ListViewPrimaryActivity;
 import com.androidprimary.ui.listview.SimpleAdapterActivity;
+import com.androidprimary.ui.text.DiffTextSizeActivity;
+import com.androidprimary.ui.text.JustTextActivity;
 import com.androidprimary.ui.video.SurfaceViewVideoActivity;
 import com.androidprimary.ui.video.VideoViewActivity;
 import com.androidprimary.ui.viewpager.ViewPagerActivity;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = TouchSystemActivity.class;
 //        Class aClass = ListViewExtendsActivity.class;
 //        Class aClass = ListViewPrimaryActivity.class;
-        Class aClass = ListViewComplexActivity.class;
+//        Class aClass = ListViewComplexActivity.class;
 //        Class aClass = ArrayAdapterActivity.class;
 //        Class aClass = SimpleAdapterActivity.class;
 //        Class aClass = A_Activity.class;
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 //        Class aClass = PropertyActivity.class;
 //        Class aClass = ViewAnimationHeiMaActivity.class;
 //        Class aClass = ViewPagerActivity.class;
+
+//        Class aClass = DiffTextSizeActivity.class;
+        Class aClass = JustTextActivity.class;
 
         startActivity(new Intent(this, aClass));
 
